@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final FlowLayout alg = findViewById(R.id.alg);
+        final FlowLayout fl = findViewById(R.id.fl);
 
         final TextView tv = new TextView(this);
         tv.setText("Added programmatically");
@@ -23,6 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
         final ViewGroup.LayoutParams lp = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        alg.addView(tv, lp);
+        fl.addView(tv, lp);
     }
 }

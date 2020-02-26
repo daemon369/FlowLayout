@@ -6,7 +6,7 @@
     android:padding="10dp">
 
     <me.daemon.flowlayout.FlowLayout
-        android:id="@+id/alg"
+        android:id="@+id/fl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#4bd144"
