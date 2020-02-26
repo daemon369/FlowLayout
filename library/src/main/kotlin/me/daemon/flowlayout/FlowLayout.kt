@@ -4,7 +4,6 @@ import android.annotation.TargetApi
 import android.content.Context
 import android.os.Build
 import android.util.AttributeSet
-import android.view.View
 import android.view.ViewDebug
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
@@ -20,7 +19,7 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
  * @since 2016-11-08 00:00
  */
 @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-class AdaptiveLabelGroup @JvmOverloads constructor(
+class FlowLayout @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
         defStyleAttr: Int = 0,
@@ -85,12 +84,11 @@ class AdaptiveLabelGroup @JvmOverloads constructor(
 
     init {
         if (null != attrs) {
-            val a = context.obtainStyledAttributes(
-                    attrs, R.styleable.AdaptiveLabelGroup, defStyleAttr, defStyleRes)
+            val a = context.obtainStyledAttributes(attrs, R.styleable.FlowLayout, defStyleAttr, defStyleRes)
 
-            horizontalDividerSize = a.getDimension(R.styleable.AdaptiveLabelGroup_horizontal_divider_size, 0f).toInt()
-            verticalDividerSize = a.getDimension(R.styleable.AdaptiveLabelGroup_vertical_divider_size, 0f).toInt()
-            maxRows = a.getInt(R.styleable.AdaptiveLabelGroup_max_rows, 0)
+            horizontalDividerSize = a.getDimension(R.styleable.FlowLayout_horizontal_divider_size, 0f).toInt()
+            verticalDividerSize = a.getDimension(R.styleable.FlowLayout_vertical_divider_size, 0f).toInt()
+            maxRows = a.getInt(R.styleable.FlowLayout_max_rows, 0)
 
             a.recycle()
         }
@@ -122,7 +120,7 @@ class AdaptiveLabelGroup @JvmOverloads constructor(
 
         for (i in 0 until count) {
             val v = getChildAt(i)
-            if (v.visibility != View.GONE) {
+            if (v.visibility != GONE) {
                 measureChildWithMargins(v, widthMeasureSpec, 0, heightMeasureSpec, 0)
             }
         }
@@ -149,7 +147,7 @@ class AdaptiveLabelGroup @JvmOverloads constructor(
             for (i in 0 until count) {
                 val v = getChildAt(i)
 
-                if (v.visibility != View.GONE) {
+                if (v.visibility != GONE) {
                     val lp = v.layoutParams as MarginLayoutParams
                     val childW = v.measuredWidth
                     val childH = v.measuredHeight
@@ -203,7 +201,7 @@ class AdaptiveLabelGroup @JvmOverloads constructor(
         for (i in 0 until count) {
             val v = getChildAt(i)
 
-            if (v.visibility == View.GONE) {
+            if (v.visibility == GONE) {
                 continue
             }
 

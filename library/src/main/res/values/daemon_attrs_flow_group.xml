@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="AdaptiveLabelGroup">
+    <declare-styleable name="FlowLayout">
 
         <!-- 容器重力方向 -->
         <attr name="gravity" format="dimension" />

@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import me.daemon.flowlayout.AdaptiveLabelGroup;
+import me.daemon.flowlayout.FlowLayout;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final AdaptiveLabelGroup alg = findViewById(R.id.alg);
+        final FlowLayout alg = findViewById(R.id.alg);
 
         final TextView tv = new TextView(this);
         tv.setText("Added programmatically");
