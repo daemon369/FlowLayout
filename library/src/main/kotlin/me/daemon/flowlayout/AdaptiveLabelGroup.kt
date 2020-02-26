@@ -1,4 +1,4 @@
-package me.daemon.adaptivelabel
+package me.daemon.flowlayout
 
 import android.annotation.TargetApi
 import android.content.Context
@@ -8,7 +8,6 @@ import android.view.View
 import android.view.ViewDebug
 import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-import me.daemon.library.R
 
 /**
  * 自适应标签容器

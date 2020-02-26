@@ -1,4 +1,4 @@
-package me.daemon.adaptivelabelgroup;
+package me.daemon.flowlayout;
 
 import org.junit.Test;
 

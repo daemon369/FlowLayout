@@ -1,4 +1,4 @@
-package me.daemon.adaptivelabelgroup;
+package me.daemon.flowlayout.demo;
 
 import android.os.Bundle;
 import android.view.ViewGroup;
@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import me.daemon.adaptivelabel.AdaptiveLabelGroup;
+import me.daemon.flowlayout.AdaptiveLabelGroup;
 
 public class MainActivity extends AppCompatActivity {
 

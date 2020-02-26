@@ -1,4 +1,4 @@
-package me.daemon.adaptivelabelgroup;
+package me.daemon.flowlayout;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;
