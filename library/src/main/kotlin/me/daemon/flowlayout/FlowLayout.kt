@@ -11,7 +11,7 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 /**
  * 自适应标签容器
  *
- * [Github](https://github.com/daemon369/AdaptiveLabelGroup)
+ * [Github](https://github.com/daemon369/FlowLayout)
  *
  * [jcenter](https://bintray.com/beta/#/daemon336699/maven/adaptivelabelgroup?tab=overview)
  *
