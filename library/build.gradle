@@ -5,21 +5,24 @@ plugins {
 }
 
 ext {
+    pub = [
+            group   : 'me.daemon',
+            artifact: 'flowlayout',
+            version : '0.1.0'
+    ]
+
     bintrayRepo = 'maven'
-    bintrayName = 'adaptivelabelgroup'
+    bintrayName = 'flowlayout'
 
     bintrayOverride = false
 
     publishedGroupId = 'me.daemon'
-    libraryName = 'AdaptiveLabelGroup'
-    artifact = 'adaptivelabelgroup'
+    libraryName = 'FlowLayout'
 
-    libraryDescription = 'Android label container'
+    libraryDescription = 'Android flow layout'
 
-    siteUrl = 'https://github.com/daemon369/AdaptiveLabelGroup'
-    gitUrl = 'https://github.com/daemon369/AdaptiveLabelGroup.git'
-
-    libraryVersion = library_version
+    siteUrl = 'https://github.com/daemon369/FlowLayout'
+    gitUrl = 'https://github.com/daemon369/FlowLayout.git'
 
     developerId = 'daemon369'
     developerName = 'daemon369'
@@ -56,7 +59,7 @@ android {
     }
 
     compileOptions {
-        kotlinOptions.freeCompilerArgs += ['-module-name', "$publishedGroupId.$artifact"]
+        kotlinOptions.freeCompilerArgs += ['-module-name', "$publishedGroupId.$pub.artifact"]
     }
 
     buildFeatures {
