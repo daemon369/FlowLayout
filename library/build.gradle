@@ -78,8 +78,31 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
-apply from: 'https://gist.githubusercontent.com/daemon369/39f43c9406312f3b565b9f8a42923b10/raw/5d4e8f6c030a5b53f3cd7017e1c2b07882b0b72e/upload.gradle'
+apply from: 'https://gist.githubusercontent.com/daemon369/68181149e12655300101ea9565679403/raw/b4770d9fc7df05224f57d2521366b7c78771be9f/AndroidPublishToMavenAndBintray'
 
 bintray {
     override = bintrayOverride
 }
+
+
+apply plugin: 'maven'
+
+task sourceJar(type: Jar) {
+    archiveClassifier.set('sources')
+    from android.sourceSets.main.java.srcDirs
+}
+artifacts {
+    archives sourceJar
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            pom.groupId = pub.group
+            pom.artifactId = pub.artifact
+            pom.version = pub.version
+            repository(url: uri("${System.getProperty("user.home")}/repo"))
+        }
+    }
+}
+
