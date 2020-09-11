@@ -4,16 +4,16 @@
     <declare-styleable name="FlowLayout">
 
         <!-- 容器重力方向 -->
-        <attr name="gravity" format="dimension" />
+        <attr name="daemon_fl_gravity" format="dimension" />
 
         <!-- 标签水平分隔距离 -->
-        <attr name="horizontal_divider_size" format="dimension" />
+        <attr name="daemon_fl_horizontal_divider_size" format="dimension" />
 
         <!-- 标签垂直分隔距离 -->
-        <attr name="vertical_divider_size" format="dimension" />
+        <attr name="daemon_fl_vertical_divider_size" format="dimension" />
 
         <!-- 最大行数，非负整数，默认为0不限制行数 -->
-        <attr name="max_rows" format="integer" />
+        <attr name="daemon_fl_max_rows" format="integer" />
 
     </declare-styleable>
 

@@ -13,7 +13,7 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
  *
  * [Github](https://github.com/daemon369/FlowLayout)
  *
- * [jcenter](https://bintray.com/beta/#/daemon336699/maven/adaptivelabelgroup?tab=overview)
+ * [jcenter](https://bintray.com/beta/#/daemon336699/maven/flowlayout?tab=overview)
  *
  * @author daemon
  * @since 2016-11-08 00:00
@@ -86,9 +86,9 @@ class FlowLayout @JvmOverloads constructor(
         if (null != attrs) {
             val a = context.obtainStyledAttributes(attrs, R.styleable.FlowLayout, defStyleAttr, defStyleRes)
 
-            horizontalDividerSize = a.getDimension(R.styleable.FlowLayout_horizontal_divider_size, 0f).toInt()
-            verticalDividerSize = a.getDimension(R.styleable.FlowLayout_vertical_divider_size, 0f).toInt()
-            maxRows = a.getInt(R.styleable.FlowLayout_max_rows, 0)
+            horizontalDividerSize = a.getDimension(R.styleable.FlowLayout_daemon_fl_horizontal_divider_size, 0f).toInt()
+            verticalDividerSize = a.getDimension(R.styleable.FlowLayout_daemon_fl_vertical_divider_size, 0f).toInt()
+            maxRows = a.getInt(R.styleable.FlowLayout_daemon_fl_max_rows, 0)
 
             a.recycle()
         }

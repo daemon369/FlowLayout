@@ -1,9 +1,9 @@
-# AdaptiveLabelGroup
+# FlowLayout
 
 自适应标签容器，支持标签自动换行，支持设置标签水平间距、垂直间距，支持设置最大行数
 
 
- [ ![Download](https://api.bintray.com/packages/daemon336699/maven/adaptivelabelgroup/images/download.svg) ](https://bintray.com/daemon336699/maven/adaptivelabelgroup/_latestVersion)
+ [ ![Download](https://api.bintray.com/packages/daemon336699/maven/flowlayout/images/download.svg) ](https://bintray.com/daemon336699/maven/flowlayout/_latestVersion)
 
 ----
 
@@ -29,7 +29,7 @@ allprojects {
 
 ```
 dependencies {
-    implementation 'me.daemon:adaptivelabelgroup:0.0.8'
+    implementation 'me.daemon:flowlayout:0.1.0'
 }
 ```
 ## 2. 布局文件中引用：
@@ -38,19 +38,19 @@ dependencies {
 ```
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp">
 
-    <me.daemon.adaptivelabel.AdaptiveLabelGroup
+    <me.daemon.flowlayout.FlowLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#4bd144"
         android:padding="5dp"
-        tools:horizontal_divider_size="5dp"
-        tools:max_rows="1"
-        tools:vertical_divider_size="5dp">
+        app:daemon_fl_horizontal_divider_size="5dp"
+        app:daemon_fl_max_rows="1"
+        app:daemon_fl_vertical_divider_size="5dp">
 
         <TextView
             android:layout_width="50dp"
@@ -90,6 +90,6 @@ dependencies {
             android:background="@drawable/bg_label"
             android:text="............................................" />
 
-    </me.daemon.adaptivelabel.AdaptiveLabelGroup>
+    </me.daemon.flowlayout.FlowLayout>
 </FrameLayout>
 ```
