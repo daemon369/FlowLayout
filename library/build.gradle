@@ -59,6 +59,9 @@ android {
         kotlinOptions.freeCompilerArgs += ['-module-name', "$publishedGroupId.$artifact"]
     }
 
+    buildFeatures {
+        buildConfig = false
+    }
 }
 
 dependencies {
