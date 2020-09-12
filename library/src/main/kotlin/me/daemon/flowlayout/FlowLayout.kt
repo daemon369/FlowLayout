@@ -1,8 +1,6 @@
 package me.daemon.flowlayout
 
-import android.annotation.TargetApi
 import android.content.Context
-import android.os.Build
 import android.util.AttributeSet
 import android.view.ViewDebug
 import android.view.ViewGroup
@@ -18,13 +16,11 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
  * @author daemon
  * @since 2016-11-08 00:00
  */
-@TargetApi(Build.VERSION_CODES.LOLLIPOP)
 class FlowLayout @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
-        defStyleAttr: Int = 0,
-        defStyleRes: Int = 0
-) : ViewGroup(context, attrs, defStyleAttr, defStyleRes) {
+        defStyleAttr: Int = 0
+) : ViewGroup(context, attrs, defStyleAttr) {
 
     /**
      * 水平间距
@@ -84,7 +80,7 @@ class FlowLayout @JvmOverloads constructor(
 
     init {
         if (null != attrs) {
-            val a = context.obtainStyledAttributes(attrs, R.styleable.FlowLayout, defStyleAttr, defStyleRes)
+            val a = context.obtainStyledAttributes(attrs, R.styleable.FlowLayout, defStyleAttr, 0)
 
             horizontalDividerSize = a.getDimension(R.styleable.FlowLayout_daemon_fl_horizontal_divider_size, 0f).toInt()
             verticalDividerSize = a.getDimension(R.styleable.FlowLayout_daemon_fl_vertical_divider_size, 0f).toInt()
