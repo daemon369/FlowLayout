@@ -16,7 +16,7 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
  * @author daemon
  * @since 2016-11-08 00:00
  */
-class FlowLayout @JvmOverloads constructor(
+open class FlowLayout @JvmOverloads constructor(
         context: Context,
         attrs: AttributeSet? = null,
         defStyleAttr: Int = 0
